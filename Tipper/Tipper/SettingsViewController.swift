@@ -12,7 +12,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tipPctLevelOne: UITextField!
     @IBOutlet weak var tipPctLevelTwo: UITextField!
     @IBOutlet weak var tipPctLevelThree: UITextField!
-
+    @IBOutlet weak var tipControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +24,9 @@ class SettingsViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func updateTipPct(_ sender: Any) {
+
+    }
     
     
     /*
