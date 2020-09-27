@@ -4,7 +4,7 @@ Flix is an app that allows users to view Yelp restaurants from the [The Yelp Fus
 
 ### App Walkthrough GIF
 
-<img src="Yelpy.gif" width=250><br>
+<img src="yelpy.gif" width=250><br>
 
 ---
 
