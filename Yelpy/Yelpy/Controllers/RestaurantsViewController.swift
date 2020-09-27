@@ -23,6 +23,8 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getAPIData()
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -30,6 +32,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     
     // Get data from API helper and retrieve restaurants
     func getAPIData() {
+//        API.getRestaurants(completion: <#T##([[String : Any]]?) -> Void#>)
         API.getRestaurants() { (restaurants) in
             guard let restaurants = restaurants else {
                 return
@@ -51,13 +54,53 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         
         let restaurant = restaurantsArray[indexPath.row]
         
-        // set label to restaurant name for each cell
-        cell.RestaurantName.text = restaurant["name"] as? String ?? ""
+        // set restaurant name for each cell
+        cell.restaurantName.text = restaurant["name"] as? String ?? ""
+        
+        // set restaurant type for each cell
+        let categories = restaurant["categories"] as! [[String: Any]]
+        let firstCategory = categories[0]
+        let firstCategoryTitle = firstCategory["title"] as! String
+        cell.restaurantType.text = firstCategoryTitle
+        
+        // set restaurant phone for each cell
+        let phone = restaurant["display_phone"] as! String
+        cell.restaurantPhone.text = phone
+        
+        // set restaurant rate for each cell
+        let rate = restaurant["rating"] as! Float
+        var rateImageName = ""
+        if (rate < 1) {
+            rateImageName = "small_0"
+        } else if (rate == 1) {
+            rateImageName = "small_1"
+        } else if (rate < 2) {
+            rateImageName = "small_1_half"
+        } else if (rate == 2) {
+            rateImageName = "small_2"
+        } else if (rate < 3) {
+            rateImageName = "small_2_half"
+        } else if (rate == 3) {
+            rateImageName = "small_3"
+        } else if (rate < 4) {
+            rateImageName = "small_3_half"
+        } else if (rate == 4) {
+            rateImageName = "small_4"
+        } else if (rate < 5) {
+            rateImageName = "small_4_half"
+        } else if (rate == 5) {
+            rateImageName = "small_5"
+        }
+        cell.restaurantRateImage.image = UIImage(named: rateImageName)
+        
+        // set restaurant review number for each cell
+        let reviewNumber = restaurant["review_count"] as! Int
+        cell.restaurantReviewNumber.text = String(reviewNumber)
 
         // set image of restaurant
         if let imageUrlString = restaurant["image_url"] as? String {
             let imageUrl = URL(string: imageUrlString)
-            cell.RestaurantImage.af.setImage(withURL: imageUrl!)
+            cell.restaurantImage.af.setImage(withURL: imageUrl!)
         }
         return cell
     }

@@ -38,13 +38,14 @@ struct API {
             } else if let data = data {
 
                 // Get data from API and return it using completion
-                print(data)
+//                print(data)
                 
                 // convert json response to a dictionary
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
                 // grab the business data and convert it to an array of dictionaries
-                let restaurants = dataDictionary["business"] as! [[String: Any]]
+//                print(dataDictionary)
+                let restaurants = dataDictionary["businesses"] as! [[String: Any]]
                 
                 // completion is an escaping method
                 // it allows the data to be used outside of the closure
