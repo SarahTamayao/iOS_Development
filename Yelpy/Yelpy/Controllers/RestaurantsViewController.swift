@@ -102,6 +102,8 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
             let imageUrl = URL(string: imageUrlString)
             cell.restaurantImage.af.setImage(withURL: imageUrl!)
         }
+        cell.restaurantImage.layer.masksToBounds = true
+        cell.restaurantImage.layer.cornerRadius = 10
         return cell
     }
     
