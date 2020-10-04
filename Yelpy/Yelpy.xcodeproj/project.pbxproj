@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3861542225291AE100EF7453 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861542125291AE100EF7453 /* Restaurant.swift */; };
 		38E50B31252030560041FF8C /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E50B30252030560041FF8C /* RestaurantCell.swift */; };
+		38FFC5DA25291D480066B617 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC5D925291D480066B617 /* Models */; };
 		5846F66BB7B966D763E7B093 /* Pods_Yelpy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F133225A389E2D30E73D052B /* Pods_Yelpy.framework */; };
 		BB47B3AA247739640029FFF6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47B3A9247739640029FFF6 /* API.swift */; };
 		BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = BB47B3AE2477426A0029FFF6 /* exampleAPI.json */; };
@@ -21,7 +23,9 @@
 
 /* Begin PBXFileReference section */
 		28C0B28DDA22389040531A98 /* Pods-Yelpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.debug.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.debug.xcconfig"; sourceTree = "<group>"; };
+		3861542125291AE100EF7453 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Yelpy/Models/Restaurant.swift; sourceTree = "<group>"; };
 		38E50B30252030560041FF8C /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		38FFC5D925291D480066B617 /* Models */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Models; path = Yelpy/Models; sourceTree = SOURCE_ROOT; };
 		BB47B3A9247739640029FFF6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BB47B3AE2477426A0029FFF6 /* exampleAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleAPI.json; sourceTree = "<group>"; };
 		BB47B3B72477565E0029FFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		BBEBF0FF247738A50044AFE0 = {
 			isa = PBXGroup;
 			children = (
+				3861542125291AE100EF7453 /* Restaurant.swift */,
 				BBEBF10A247738A50044AFE0 /* Yelpy */,
 				BBEBF109247738A50044AFE0 /* Products */,
 				4E1529C217C1888C81D24DAF /* Pods */,
@@ -124,6 +129,7 @@
 				BBEBF10D247738A50044AFE0 /* SceneDelegate.swift */,
 				BB47B3AE2477426A0029FFF6 /* exampleAPI.json */,
 				BB47B3B32477539A0029FFF6 /* Cells */,
+				38FFC5D925291D480066B617 /* Models */,
 				BB47B3AC247739890029FFF6 /* Controllers */,
 				BB47B3AB247739720029FFF6 /* Network */,
 				BB47B3AD247739F00029FFF6 /* Storyboards */,
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FFC5DA25291D480066B617 /* Models in Resources */,
 				BBEBF118247738A50044AFE0 /* LaunchScreen.storyboard in Resources */,
 				BB47B3AF2477426A0029FFF6 /* exampleAPI.json in Resources */,
 				BBEBF115247738A50044AFE0 /* Assets.xcassets in Resources */,
@@ -250,6 +257,7 @@
 			files = (
 				38E50B31252030560041FF8C /* RestaurantCell.swift in Sources */,
 				BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */,
+				3861542225291AE100EF7453 /* Restaurant.swift in Sources */,
 				BB47B3AA247739640029FFF6 /* API.swift in Sources */,
 				BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */,
 				BBEBF10E247738A50044AFE0 /* SceneDelegate.swift in Sources */,
