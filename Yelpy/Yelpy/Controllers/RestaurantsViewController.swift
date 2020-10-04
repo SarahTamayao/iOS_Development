@@ -17,7 +17,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     // Configure the API and initialize restaurantsArray
-    var restaurantsArray: [[String: Any?]] = []
+    var restaurantsArray: [Restaurant] = []
     
     // Add tableView datasource + delegate
     override func viewDidLoad() {
@@ -32,12 +32,11 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     
     // Get data from API helper and retrieve restaurants
     func getAPIData() {
-//        API.getRestaurants(completion: <#T##([[String : Any]]?) -> Void#>)
         API.getRestaurants() { (restaurants) in
             guard let restaurants = restaurants else {
                 return
             }
-//            print(restaurants)
+            print(restaurants)
             self.restaurantsArray = restaurants
             self.tableView.reloadData()
         }

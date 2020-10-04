@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RestaurantCell: UITableViewCell {
 
@@ -17,6 +18,18 @@ class RestaurantCell: UITableViewCell {
     @IBOutlet weak var restaurantPhone: UILabel!
     @IBOutlet weak var restaurantRateImage: UIImageView!
     @IBOutlet weak var restaurantReviewNumber: UILabel!
+    
+    // add movie variable + didset
+    var r: Restaurant! {
+        restaurantName.text = r.name
+        restaurantType.text = r.mainCategory
+        restaurantPhone.text = r.phone
+        restaurantReviewNumber.text = String(r.reviews) + " reviews"
+        restaurantRateImage.image = Stars.dict[r.rating]!
+        restaurantImage.af.setImage(withURL: r.imageURL!)
+        restaurantImage.layer.cornerRadius = 10
+        restaurantImage.clipsToBounds = true
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
