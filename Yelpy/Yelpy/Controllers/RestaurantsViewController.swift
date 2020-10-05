@@ -19,6 +19,15 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     // Configure the API and initialize restaurantsArray
     var restaurantsArray: [Restaurant] = []
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let r = restaurantsArray[indexPath.row]
+            let detailViewController = segue.destination as! RestaurantDetailViewController
+            detailViewController.r = r
+        }
+    }
+    
     // Add tableView datasource + delegate
     override func viewDidLoad() {
         super.viewDidLoad()

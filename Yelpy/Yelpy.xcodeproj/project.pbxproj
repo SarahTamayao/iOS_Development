@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		381ED0F9252997C9005DC497 /* YelpStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381ED0F8252997C9005DC497 /* YelpStars.swift */; };
+		381ED0FC252A733A005DC497 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381ED0FB252A733A005DC497 /* RestaurantDetailViewController.swift */; };
 		3861542225291AE100EF7453 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861542125291AE100EF7453 /* Restaurant.swift */; };
 		38E50B31252030560041FF8C /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E50B30252030560041FF8C /* RestaurantCell.swift */; };
 		38FFC5DA25291D480066B617 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC5D925291D480066B617 /* Models */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		28C0B28DDA22389040531A98 /* Pods-Yelpy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelpy.debug.xcconfig"; path = "Target Support Files/Pods-Yelpy/Pods-Yelpy.debug.xcconfig"; sourceTree = "<group>"; };
 		381ED0F8252997C9005DC497 /* YelpStars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpStars.swift; path = Yelpy/Models/YelpStars.swift; sourceTree = "<group>"; };
+		381ED0FB252A733A005DC497 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		3861542125291AE100EF7453 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Yelpy/Models/Restaurant.swift; sourceTree = "<group>"; };
 		38E50B30252030560041FF8C /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		38FFC5D925291D480066B617 /* Models */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Models; path = Yelpy/Models; sourceTree = SOURCE_ROOT; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BBEBF10F247738A50044AFE0 /* RestaurantsViewController.swift */,
+				381ED0FB252A733A005DC497 /* RestaurantDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				38E50B31252030560041FF8C /* RestaurantCell.swift in Sources */,
 				BBEBF110247738A50044AFE0 /* RestaurantsViewController.swift in Sources */,
+				381ED0FC252A733A005DC497 /* RestaurantDetailViewController.swift in Sources */,
 				3861542225291AE100EF7453 /* Restaurant.swift in Sources */,
 				BB47B3AA247739640029FFF6 /* API.swift in Sources */,
 				BBEBF10C247738A50044AFE0 /* AppDelegate.swift in Sources */,
