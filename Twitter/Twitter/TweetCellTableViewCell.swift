@@ -23,7 +23,6 @@ class TweetCellTableViewCell: UITableViewCell {
     
     @IBAction func retweetAction(_ sender: Any) {
         let toBeRetweeted = !retweeted
-        print("toBeRetweeted:", toBeRetweeted)
         if (toBeRetweeted) {
             TwitterAPICaller.client?.retweet(tweetId: tweetId, success: {
                 self.setRetweeted(true)
@@ -59,7 +58,6 @@ class TweetCellTableViewCell: UITableViewCell {
     
     func setRetweeted(_ isRetweeted: Bool) {
         retweeted = isRetweeted
-        print("retweeted:", retweeted)
         if (retweeted) {
             retweetButton.setImage(UIImage(named: "retweet-icon-green"), for: UIControl.State.normal)
 //            retweetButton.isEnabled = false
