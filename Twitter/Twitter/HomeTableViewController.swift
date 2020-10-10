@@ -89,12 +89,38 @@ class HomeTableViewController: UITableViewController {
         let imageURL = URL(string: (user["profile_image_url_https"] as? String)!)
         let data = try? Data(contentsOf: imageURL!)
         
+        let dateString = tweetArray[indexPath.row]["created_at"] as! String
+//        print("STRING:", dateString)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E MMM d HH:mm:ss Z yyyy"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        let dateObj = dateFormatter.date(from: dateString)
+//        print("TWEET:", dateObj)
+        var delta = -dateObj!.timeIntervalSinceNow
+        if (delta < 60) {
+            cell.timeLabel.text = "\(Int(delta)) seconds ago"
+        } else {
+            delta /= 60
+            if (delta < 60) {
+                cell.timeLabel.text = "\(Int(delta)) minutes ago"
+            } else {
+                delta /= 60
+                if (delta < 24) {
+                    cell.timeLabel.text = "\(Int(delta)) hours ago"
+                } else {
+                    delta /= 24
+                    cell.timeLabel.text = "\(Int(delta)) days ago"
+                }
+            }
+        }
+        
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
         
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
+        
         
         return cell
     }
