@@ -104,7 +104,7 @@ class HomeTableViewController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E MMM d HH:mm:ss Z yyyy"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        let dateObj = dateFormatter.date(from: dateString) as! Date
+        let dateObj = dateFormatter.date(from: dateString)!
         cell.timeLabel.text = timeAgoSince(dateObj)
         
         if let imageData = data {
