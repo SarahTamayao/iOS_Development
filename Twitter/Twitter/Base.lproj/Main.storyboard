@@ -109,7 +109,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="FI4-e2-gdC">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="cu5-2D-rWN" kind="presentation" id="lwX-99-is4"/>
+                                <segue destination="cu5-2D-rWN" kind="presentation" identifier="collectTweets" id="lwX-99-is4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -195,6 +195,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cu5-2D-rWN" userLabel="Tweet Navigation Controller" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hB7-bR-dgo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5IE-9Q-HP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
