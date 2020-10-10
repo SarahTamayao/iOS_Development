@@ -45,21 +45,24 @@
         <scene sceneID="w5m-jk-zh4">
             <objects>
                 <tableViewController id="EmT-IB-ROG" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TMR-Xl-Sog">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TMR-Xl-Sog">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="116" id="gvI-4s-cmA" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="130" id="gvI-4s-cmA" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gvI-4s-cmA" id="PXR-61-cdv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="116"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-6b-F1T">
-                                            <rect key="frame" x="8" y="11" width="75" height="75"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qe0-6b-F1T">
+                                            <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="75" id="WVf-UJ-uVu"/>
+                                                <constraint firstAttribute="width" constant="75" id="fdS-1h-5EO"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweet Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFz-6B-d7F">
                                             <rect key="frame" x="99" y="11" width="260" height="17"/>
@@ -69,23 +72,59 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjJ-99-lLA">
-                                            <rect key="frame" x="99" y="27" width="260" height="75"/>
+                                            <rect key="frame" x="99" y="27" width="266" height="75"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 minutes ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30M-wp-f49">
-                                            <rect key="frame" x="8" y="94" width="75" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 minutes ago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30M-wp-f49">
+                                            <rect key="frame" x="8" y="88" width="75" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="Ppp-PM-3w1"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3b-Rh-AtV">
+                                            <rect key="frame" x="325" y="82" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Xen-GV-RbG"/>
+                                                <constraint firstAttribute="height" constant="40" id="wp3-OU-Wpf"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="favor-icon"/>
+                                            <connections>
+                                                <action selector="favAction:" destination="gvI-4s-cmA" eventType="touchUpInside" id="tAJ-Nm-BL6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYe-3A-RXc" userLabel="Retweet Button">
+                                            <rect key="frame" x="285" y="89" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7sd-bA-HhQ"/>
+                                                <constraint firstAttribute="width" constant="30" id="nmD-lm-Yn5"/>
+                                            </constraints>
+                                            <state key="normal" image="retweet-icon"/>
+                                            <connections>
+                                                <action selector="retweetAction:" destination="gvI-4s-cmA" eventType="touchUpInside" id="dUU-yN-yLR"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="R3b-Rh-AtV" secondAttribute="trailing" constant="10" id="0De-k1-yop"/>
+                                        <constraint firstAttribute="bottom" secondItem="R3b-Rh-AtV" secondAttribute="bottom" constant="8" id="18t-H2-aLa"/>
+                                        <constraint firstItem="R3b-Rh-AtV" firstAttribute="leading" secondItem="qYe-3A-RXc" secondAttribute="trailing" constant="10" id="3cR-jO-H54"/>
+                                        <constraint firstItem="Qe0-6b-F1T" firstAttribute="top" secondItem="PXR-61-cdv" secondAttribute="top" constant="8" id="Pgt-ee-Tvn"/>
+                                        <constraint firstItem="30M-wp-f49" firstAttribute="leading" secondItem="PXR-61-cdv" secondAttribute="leading" constant="8" id="SXC-Ys-0vZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qYe-3A-RXc" secondAttribute="bottom" id="fqM-ea-7zW"/>
+                                        <constraint firstItem="Qe0-6b-F1T" firstAttribute="leading" secondItem="PXR-61-cdv" secondAttribute="leading" constant="8" id="nj5-i9-h61"/>
+                                        <constraint firstItem="30M-wp-f49" firstAttribute="top" secondItem="Qe0-6b-F1T" secondAttribute="bottom" constant="5" id="yhD-xZ-6r6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favButton" destination="R3b-Rh-AtV" id="UXm-v4-qaB"/>
                                     <outlet property="profileImageView" destination="Qe0-6b-F1T" id="ofi-Ob-011"/>
+                                    <outlet property="retweetButton" destination="qYe-3A-RXc" id="GW4-ee-ztE"/>
                                     <outlet property="timeLabel" destination="30M-wp-f49" id="S3Z-Ip-qfD"/>
                                     <outlet property="tweetContent" destination="KjJ-99-lLA" id="pwM-oK-fDO"/>
                                     <outlet property="userNameLabel" destination="qFz-6B-d7F" id="xRu-4G-PXt"/>
@@ -220,6 +259,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

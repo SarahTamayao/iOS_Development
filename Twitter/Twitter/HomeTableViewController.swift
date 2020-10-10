@@ -8,17 +8,6 @@
 
 import UIKit
 
-extension Date {
-    func timeAgo() -> String {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
-        formatter.allowedUnits = [.year, .month, .day, .hour, .minute, .second]
-        formatter.zeroFormattingBehavior = .dropAll
-        formatter.maximumUnitCount = 1
-        return String(format: formatter.string(from: self, to: Date()) ?? "", locale: .current)
-    }
-}
-
 class HomeTableViewController: UITableViewController {
     
     var tweetArray = [NSDictionary]()
@@ -30,6 +19,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        tableView.estimatedRowHeight = 130
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +44,7 @@ class HomeTableViewController: UITableViewController {
                 self.tweetArray.removeAll()
                 for tweet in tweets {
                     self.tweetArray.append(tweet)
-                    print(tweet)
+//                    print(tweet)
                 }
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
@@ -114,6 +104,9 @@ class HomeTableViewController: UITableViewController {
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
         
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         
         return cell
     }
