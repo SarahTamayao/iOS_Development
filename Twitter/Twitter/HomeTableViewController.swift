@@ -8,6 +8,17 @@
 
 import UIKit
 
+extension Date {
+    func timeAgo() -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .full
+        formatter.allowedUnits = [.year, .month, .day, .hour, .minute, .second]
+        formatter.zeroFormattingBehavior = .dropAll
+        formatter.maximumUnitCount = 1
+        return String(format: formatter.string(from: self, to: Date()) ?? "", locale: .current)
+    }
+}
+
 class HomeTableViewController: UITableViewController {
     
     var tweetArray = [NSDictionary]()
@@ -90,29 +101,11 @@ class HomeTableViewController: UITableViewController {
         let data = try? Data(contentsOf: imageURL!)
         
         let dateString = tweetArray[indexPath.row]["created_at"] as! String
-//        print("STRING:", dateString)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E MMM d HH:mm:ss Z yyyy"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        let dateObj = dateFormatter.date(from: dateString)
-//        print("TWEET:", dateObj)
-        var delta = -dateObj!.timeIntervalSinceNow
-        if (delta < 60) {
-            cell.timeLabel.text = "\(Int(delta)) seconds ago"
-        } else {
-            delta /= 60
-            if (delta < 60) {
-                cell.timeLabel.text = "\(Int(delta)) minutes ago"
-            } else {
-                delta /= 60
-                if (delta < 24) {
-                    cell.timeLabel.text = "\(Int(delta)) hours ago"
-                } else {
-                    delta /= 24
-                    cell.timeLabel.text = "\(Int(delta)) days ago"
-                }
-            }
-        }
+        let dateObj = dateFormatter.date(from: dateString) as! Date
+        cell.timeLabel.text = timeAgoSince(dateObj)
         
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
