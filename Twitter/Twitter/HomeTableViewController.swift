@@ -32,6 +32,7 @@ class HomeTableViewController: UITableViewController {
                 self.tweetArray.removeAll()
                 for tweet in tweets {
                     self.tweetArray.append(tweet)
+                    print(tweet)
                 }
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
@@ -52,7 +53,7 @@ class HomeTableViewController: UITableViewController {
                     self.tweetArray.append(tweet)
                 }
                 self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
+//                self.refreshControl?.endRefreshing()
             },
             failure: { (Error) in
                 print("Could not retrieve tweets! oh no!!")
