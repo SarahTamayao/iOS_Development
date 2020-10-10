@@ -126,11 +126,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7mV-jA-QCT">
-                                <rect key="frame" x="0.0" y="56" width="375" height="182"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="use-70-Hzn">
+                                <rect key="frame" x="0.0" y="56" width="375" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="182" id="bRS-wO-rn0"/>
+                                    <constraint firstAttribute="height" constant="150" id="CIX-he-Vz1"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -140,7 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="UOe-XN-Vlr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7mV-jA-QCT" firstAttribute="top" secondItem="UOe-XN-Vlr" secondAttribute="top" id="uDc-EC-p20"/>
+                            <constraint firstItem="use-70-Hzn" firstAttribute="leading" secondItem="UOe-XN-Vlr" secondAttribute="leading" id="PU7-nv-vd2"/>
+                            <constraint firstItem="use-70-Hzn" firstAttribute="top" secondItem="UOe-XN-Vlr" secondAttribute="top" id="wXB-XW-hUa"/>
+                            <constraint firstItem="use-70-Hzn" firstAttribute="trailing" secondItem="UOe-XN-Vlr" secondAttribute="trailing" id="z7Y-Mn-PDB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SFn-vb-dQT">
@@ -157,6 +159,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetTextView" destination="use-70-Hzn" id="OEo-oq-f5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6O-qm-EYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

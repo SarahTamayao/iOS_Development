@@ -22,6 +22,8 @@ class HomeTableViewController: UITableViewController {
         tableView.refreshControl = myRefreshControl
     }
     
+    
+    
     @objc func loadTweets() {
         numberOfTweet = 20
         
@@ -37,8 +39,8 @@ class HomeTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
             },
-            failure: { (Error) in
-                print("Could not retrieve tweets! oh no!!")
+            failure: { (error) in
+                print("Error retrieve tweet \(error)")
             })
     }
     
