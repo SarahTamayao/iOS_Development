@@ -53,7 +53,7 @@ class HomeTableViewController: UITableViewController {
                     self.tweetArray.append(tweet)
                 }
                 self.tableView.reloadData()
-//                self.refreshControl?.endRefreshing()
+                self.refreshControl?.endRefreshing()
             },
             failure: { (Error) in
                 print("Could not retrieve tweets! oh no!!")
