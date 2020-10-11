@@ -46,7 +46,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]
         let user = post["author"] as! PFUser
-        cell.usernameLabel.text = "\(String(describing: user.username!)) said"
+        cell.usernameLabel.text = "\(String(describing: user.username!)): "
         cell.captionLabel.text = post["caption"] as? String
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
