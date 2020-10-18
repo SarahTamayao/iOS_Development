@@ -144,21 +144,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-4r-iix">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-4r-iix">
                                                     <rect key="frame" x="8" y="8" width="56" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="This is a long long long long long long long long" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh7-g2-eMK">
-                                                    <rect key="frame" x="72" y="8" width="334" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="This is a long long long long long long long long" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh7-g2-eMK">
+                                                    <rect key="frame" x="72" y="8" width="334" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Lh7-g2-eMK" firstAttribute="leading" secondItem="xaH-4r-iix" secondAttribute="trailing" constant="8" id="0qs-BZ-zE8"/>
+                                                <constraint firstItem="xaH-4r-iix" firstAttribute="leading" secondItem="mB8-bg-WP7" secondAttribute="leading" constant="8" id="U7P-WT-Xhe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lh7-g2-eMK" secondAttribute="trailing" constant="8" id="fA6-0z-SJ3"/>
+                                                <constraint firstItem="Lh7-g2-eMK" firstAttribute="top" secondItem="mB8-bg-WP7" secondAttribute="top" constant="8" id="fsf-8b-mgr"/>
+                                                <constraint firstItem="xaH-4r-iix" firstAttribute="top" secondItem="mB8-bg-WP7" secondAttribute="top" constant="8" id="xWj-cO-H5r"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLabel" destination="Lh7-g2-eMK" id="KVZ-9p-ygh"/>

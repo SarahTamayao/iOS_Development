@@ -79,7 +79,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         // Create the comment
         let comment = PFObject(className: "Comments")
-        comment["text"] = "This is a random comment"
+        comment["text"] = text
         comment["post"] = selectedPost
         comment["author"] = PFUser.current()!
 
@@ -134,8 +134,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             let comment = comments[indexPath.row - 1]
             cell.commentLabel.text = comment["text"] as? String
             let user = comment["author"] as! PFUser
-            cell.nameLabel.text = user.username
-            
+            cell.nameLabel.text = "\(String(describing: user.username!)): "   
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
