@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BA1830253BA0BF00751769 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BA182F253BA0BF00751769 /* CommentCell.swift */; };
 		38E118B62532A57500E296D4 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E118B52532A57500E296D4 /* PostCell.swift */; };
 		38EC8607253260B200D201A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EC8606253260B200D201A9 /* AppDelegate.swift */; };
 		38EC8609253260B200D201A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EC8608253260B200D201A9 /* SceneDelegate.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		1105DE72C4E677041AF52331 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BA182F253BA0BF00751769 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		38E118B52532A57500E296D4 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		38EC8603253260B200D201A9 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EC8606253260B200D201A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				38EC8608253260B200D201A9 /* SceneDelegate.swift */,
 				38EC860A253260B200D201A9 /* ViewController.swift */,
 				38EC860C253260B200D201A9 /* Main.storyboard */,
+				38BA182F253BA0BF00751769 /* CommentCell.swift */,
 				38EC860F253260B400D201A9 /* Assets.xcassets */,
 				38EC8611253260B400D201A9 /* LaunchScreen.storyboard */,
 				38EC8614253260B400D201A9 /* Info.plist */,
@@ -440,6 +443,7 @@
 				38EC8642253262D900D201A9 /* FeedViewController.swift in Sources */,
 				38EC8647253268EC00D201A9 /* LoginTextField.swift in Sources */,
 				38EC868425329E0D00D201A9 /* CameraViewController.swift in Sources */,
+				38BA1830253BA0BF00751769 /* CommentCell.swift in Sources */,
 				38EC8607253260B200D201A9 /* AppDelegate.swift in Sources */,
 				38EC8609253260B200D201A9 /* SceneDelegate.swift in Sources */,
 				38E118B62532A57500E296D4 /* PostCell.swift in Sources */,
